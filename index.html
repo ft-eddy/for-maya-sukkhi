@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sukhreet</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        .hidden {
+            opacity: 0;
+            transform: translateX(100vw);
+            pointer-events: none;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .yes { background-color: red; color: white; }
+        .no { background-color: gray; color: white; }
+        .yes:hover { background-color: darkred; }
+        .no:hover { background-color: darkgray; }
+    </style>
+</head>
+<body>
+    <div class="container" id="slide1">
+        <h1>For Sukhreet</h1>
+        <p>I don’t know how to explain this, but here I am, trying to put my chaotic yet beautiful thoughts into words. Imagine this: a random day in a group full of people, just another conversation among many, and then—boom!—you appeared, Sukhreet. Just like that, life became a little brighter, a little funnier, and a lot more interesting. They say virtual bonds aren’t real, but if this isn’t real, then I don’t know what is.
+
+Sukhreet, you’re like that unexpected meme that makes me laugh on my all days when ever i talk to you, the kind of person whose words feel like poetry even in casual conversations. Talking to you feels like opening a book I never want to finish. Your vibe? Unmatched. Your energy? Addictive. Your kindness? Unbelievable. And don’t even get me started on your charm—it’s enough to make even WiFi signals weak.
+
+It’s crazy how we’ve never met, yet it feels like I’ve known you forever. From our legendary UNO battles (which I’m totally better at, don’t argue , nd bhale hi sirf ek din) to our Truth and Dare games that always left me smiling(bhale hi ek din but this was enough to make me happy baaweee), every moment with you is special. And you know what? I’ve always wanted to have a virtual date with you—something just for us. But more than that, Sukhreet, I really want to meet you as soon as possible because no screen can ever do justice to how amazing you truly are, i want to give u flowers in real but my bad i m not there....
+
+Sukhiiiii, I want you to be my music—the melody that lingers in my mind, the rhythm that makes my heart race, the song that I never want to stop playing. Just like a guitar, every note of yours, every word, every laugh, creates something beautiful. And me? I want to be the one who plays that tune forever, making sure your melody is never lost, only growing sweeter with time.I want to play alllll the songs that belongs to you nd jo bhi apko dekh yad krke merko yad ate....
+
+And oh, how could I forget? Those glasses—whether they rest on your nose or not, you’re effortlessly stunning. And your love for makeup? Sukhreet, if I’m there, you’ll never have to struggle alone. Whether it’s blending that perfect shade or picking out the right lipstick, I’ll be right there, appreciating every little detail. And since you’re a foodie, well, lucky for you—I love to cook. Imagine this: late-night cravings, me in the kitchen, and you stealing bites while pretending to help. Sounds perfect, doesn’t it?..tension hi ni hogi kabhi bhi!!!
+
+So, here’s the truth: I like you, Sukhreet. Not just because you’re amazing (which you obviously are), but because you make life feel a little more poetic, a little more magical, and a lot more worth looking forward to. This proposal isn’t just about asking a question—it’s about celebrating the connection we share, the laughs, the deep talks, the late-night games, and the countless memories yet to come, meri life ka sbse best chapter ho ap nd i dont wanna loose u by any chance!!! . And Sukhreet, I’m not just here for a fleeting romance; I want to date you with the intention of marriage. I want us to grow together, to build something beautiful, to create a love story that’s not just sweet but has the intensity of the books you love—the kind that leaves you breathless, craving more. If you’re comfortable, let’s start this journey together. Let’s date, and who knows? Maybe one day, we’ll be looking back at this moment, smiling as we grow old side by side, knowing this was just the beginning of our forever.
+
+Sukhreet, I am so incredibly glad to have you in my life. You are a blessing I never saw coming, a rare gem that shines effortlessly. Thank you for being born, for existing, for crossing paths with me in this chaotic world. You make my days brighter, my nights warmer, and my heart fuller. If I could, I’d wrap the universe in a bow and gift it to you, but since I can’t, I’ll do my best to make sure you always feel as special as you truly are.
+
+No matter what you decide, our friendship remains the same. But if there’s even the slightest chance you feel the same way, then let’s make this story even more beautiful. 💙</p>
+        <div class="buttons">
+            <button class="yes" onclick="nextSlide('yesSlide')">Yes</button>
+            <button class="no" onclick="nextSlide('noSlide')">No</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="yesSlide">
+        <h1>I'm the happiest person alive!</h1>
+        <p>I promise to make you smile every day. Let's create beautiful memories together! ❤️</p>
+        <button onclick="nextSlide('slide2')">Next</button>
+    </div>
+
+    <div class="container hidden" id="noSlide">
+        <h1>It's okay!</h1>
+        <p>Our friendship remains the same. Forget what I said, and let's keep being awesome friends! 😊</p>
+        <button onclick="nextSlide('slide2')">Next</button>
+    </div>
+
+    <div class="container hidden" id="slide2">
+        <h1>Surprise Slide!</h1>
+        <p>hola amigooooooooooo!</p>
+        <button onclick="nextSlide('slide3')">Next</button>
+    </div>
+
+    <div class="container hidden" id="slide3">
+        <h1>Final Slide</h1>
+        <p>i Hope you liked this experience! bas time jyda lg gya nd srryy late ho gya mai ❤️</p>
+    </div>
+
+    <script>
+        function nextSlide(nextId) {
+            let currentSlide = document.querySelector('.container:not(.hidden)');
+            let nextSlide = document.getElementById(nextId);
+            if (currentSlide) {
+                currentSlide.classList.add('hidden');
+            }
+            nextSlide.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
